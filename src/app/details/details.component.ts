@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HousingService } from '../housing.service';
+import { HousingLocation } from '../housinglocation';
 
 @Component({
   selector: 'app-details',
@@ -36,4 +39,4 @@ export class DetailsComponent {
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
   }
 }
-}
+

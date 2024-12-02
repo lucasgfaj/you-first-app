@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
   providedIn: 'root'
 })
 export class HousingService {
+  housingLocationList: any;
 
   constructor() { }
  
@@ -12,6 +13,6 @@ export class HousingService {
     return this.housingLocationList;
   }
   getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+    return this.housingLocationList.find((housingLocation: { id: number; }) => housingLocation.id === id);
   }
 }
